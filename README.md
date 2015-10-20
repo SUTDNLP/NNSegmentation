@@ -1,2 +1,2 @@
 # NNSegmentation
-Chinese word segmentation
+Chinese word segmentation using neural networks based on package LibN3L
