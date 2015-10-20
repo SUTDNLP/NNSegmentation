@@ -1,0 +1,2 @@
+# NNSegmentation
+Chinese word segmentation
