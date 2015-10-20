@@ -4,7 +4,7 @@ project(MinervaSegs)
 include_directories(
   basic
   /opt/mshadow/
-  /home/chihyang_teng/2.research/mshan_seg/LibN3L/
+  ../LibN3L/
 )
 
 add_definitions(-DUSE_CUDA=0)
