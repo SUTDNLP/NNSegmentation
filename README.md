@@ -13,10 +13,8 @@ Compile
 ======
 * Download [LibN3L](https://github.com/SUTDNLP/LibN3L) library and compile it. 
 * Open [CMakeLists.txt](CMakeLists.txt) and change "../LibN3L/" into the directory of your [LibN3L](https://github.com/SUTDNLP/LibN3L) package.
-* 
-    cmake .
-*
-    make
+`cmake .`  
+`make`  
 
 Example
 ======
