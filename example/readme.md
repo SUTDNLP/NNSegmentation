@@ -12,12 +12,14 @@ You can use
 to see the performance.  
 
 For example, performing `grep Exeed SparseCRFMMLabeler.log -C 4` will show similar messages below  
-`
-Recall:P=43285/46549=0.92988, Accuracy:P=43285/46435=0.932163, Fmeasure:0.93102  
-test:  
-Recall:P=83800/90886=0.922034, Accuracy:P=83800/90310=0.927915, Fmeasure:0.924965  
-Exceeds best previous performance of 0.9309. Saving model file..
-`  
+`Recall:P=43285/46549=0.92988, Accuracy:P=43285/46435=0.932163, Fmeasure:0.93102`    
+
+`test:`  
+
+`Recall:P=83800/90886=0.922034, Accuracy:P=83800/90310=0.927915, Fmeasure:0.924965 `   
+
+`Exceeds best previous performance of 0.9309. Saving model file..`    
+
 The first "Recall..." line shows you the performance of the dev set and the second "Recall..." line shows 
 you the performance of the test set.   
 
