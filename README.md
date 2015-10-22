@@ -12,7 +12,8 @@ Please read Table 4 in [LibN3L: A lightweight Package for Neural NLP](https://gi
 Compile
 ======
 * Download [LibN3L](https://github.com/SUTDNLP/LibN3L) library and compile it. 
-* Open [CMakeLists.txt](CMakeLists.txt) and change "../LibN3L/" into the directory of your [LibN3L](https://github.com/SUTDNLP/LibN3L) package.
+* Open [CMakeLists.txt](CMakeLists.txt) and change "../LibN3L/" into the directory of your [LibN3L](https://github.com/SUTDNLP/LibN3L) package.  
+
 `cmake .`  
 `make`  
 
@@ -31,4 +32,4 @@ This example data contains
 * Character Trigram Embedding ["tri.vec"](example/embeddings/trichar.vec)
 * Parameter Setting File ["sparse"](example/options/option.sparse) for SparseCRFMMLabler, ["lstm"](example/options/option.sparse) for LSTMCRFMMLabeler and ["sparselstm"](example/options/option.sparse+lstm) for SparseLSTMCRFMMLabler.
 
-For more details about the example, please read the example ["readme"](example/readme.md).
+For more details about the example, please read the example ["readme.md"](example/readme.md).
