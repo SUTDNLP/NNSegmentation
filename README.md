@@ -21,7 +21,7 @@ Example
 ======
 This [example](example) shows how to train three Chinese word segmentation models for the pku corpus of the Sighan Bakeoff 2005 dataset.  
 These models are
-* **SparseCRFMMLabler** which only considers the sparse features and works like a CRF model
+* **SparseCRFMMLabeler** which only considers the sparse features and works like a CRF model
 * **LSTMCRFMMLabeler** which only uses neural embeddings as input and employs CRF Maximum Likelihood as training objective.  
 * **SparseLSTMCRFMMLabeler** which supports both neural embeddings and sparse features and also employs CRF Maximum Likelihood as training objective.  
 
@@ -30,6 +30,6 @@ This example data contains
 * Character Unigram Embedding ["char.vec"](example/embeddings/char.vec)
 * Character Bigram Embedding ["bi.vec"](example/embeddings/bichar.vec)
 * Character Trigram Embedding ["tri.vec"](example/embeddings/trichar.vec)
-* Parameter Setting File ["sparse"](example/options/option.sparse) for SparseCRFMMLabler, ["lstm"](example/options/option.sparse) for LSTMCRFMMLabeler and ["sparselstm"](example/options/option.sparse+lstm) for SparseLSTMCRFMMLabler.
+* Parameter Setting File ["sparse"](example/options/option.sparse) for SparseCRFMMLabeler, ["lstm"](example/options/option.sparse) for LSTMCRFMMLabeler and ["sparselstm"](example/options/option.sparse+lstm) for SparseLSTMCRFMMLabeler.
 
 For more details about the example, please read the example ["readme.md"](example/readme.md).
