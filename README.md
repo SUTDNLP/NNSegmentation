@@ -15,17 +15,16 @@ Compile
 * Open [CMakeLists.txt](CMakeLists.txt) and change "../LibN3L/" into the directory of your [LibN3L](https://github.com/SUTDNLP/LibN3L) package.
 * 
     cmake .
-
 *
     make
 
 Example
 ======
-This example shows how to train three Chinese word segmentation models for the pku corpus of the Sighan Bakeoff 2005 dataset.  
+This [example](example) shows how to train three Chinese word segmentation models for the pku corpus of the Sighan Bakeoff 2005 dataset.  
 These models are
-* SparseCRFMMLabler which only considers the sparse features and works like a CRF model
-* LSTMCRFMMLabeler which only uses neural embeddings as input and employs CRF Maximum Likelihood as training objective.  
-* SparseLSTMCRFMMLabeler which supports both neural embeddings and sparse features and also employs CRF Maximum Likelihood as training objective.  
+* **SparseCRFMMLabler** which only considers the sparse features and works like a CRF model
+* **LSTMCRFMMLabeler** which only uses neural embeddings as input and employs CRF Maximum Likelihood as training objective.  
+* **SparseLSTMCRFMMLabeler** which supports both neural embeddings and sparse features and also employs CRF Maximum Likelihood as training objective.  
 
 This example data contains  
 * Sparse Features ["train.feats"](example/pku/pku.sample.train.feats), ["dev.feats"](example/pku/pku.sample.dev.feats) and ["test.feats"](example/pku/pku.test.feats). The training features and dev features are extracted only from a subset of the pku corpus.   
