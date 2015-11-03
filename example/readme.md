@@ -3,7 +3,7 @@
 `./run.sh`  
 #Result File Description
 If everything works as expected, a folder called *pku.sample* will appear in this directory. 
-There will three logs file in *pku.sample* directory. 
+There will be three logs file in *pku.sample* directory. 
 They are *SparseCRFMMLabeler.log*, *SparseLSTMCRFMMLabeler.log* and *LSTMCRFMMLabeler.log*.
 Each log file records the performance on the dev set and test set. 
 
