@@ -226,6 +226,85 @@ public:
     inf.close();
     setOptions(vecLine);
   }
+
+  void writeModel(LStream &outf) {
+
+
+    WriteVector(outf, testFiles);
+    WriteString(outf, outBest);
+
+    WriteBinary(outf, wordCutOff);
+    WriteBinary(outf, featCutOff);
+    WriteBinary(outf, charCutOff);
+    WriteBinary(outf, tagCutOff);
+    WriteBinary(outf, initRange);
+    WriteBinary(outf, maxIter);
+    WriteBinary(outf, batchSize);
+    WriteBinary(outf, adaEps);
+    WriteBinary(outf, adaAlpha);
+    WriteBinary(outf, regParameter);
+    WriteBinary(outf, dropProb);
+    WriteBinary(outf, linearHiddenSize);
+    WriteBinary(outf, hiddenSize);
+    WriteBinary(outf, rnnHiddenSize);
+    WriteBinary(outf, wordEmbSize);
+    WriteBinary(outf, wordcontext);
+    WriteBinary(outf, wordEmbFineTune);
+    WriteBinary(outf, tagEmbSize);
+    WriteBinary(outf, tagEmbFineTune);
+    WriteBinary(outf, charEmbSize);
+    WriteBinary(outf, charcontext);
+    WriteBinary(outf, charEmbFineTune);
+    WriteBinary(outf, charhiddenSize);
+    WriteBinary(outf, verboseIter);
+    WriteBinary(outf, saveIntermediate);
+    WriteBinary(outf, train);
+    WriteBinary(outf, maxInstance);
+    WriteBinary(outf, seg);
+    WriteBinary(outf, relu);
+    WriteBinary(outf, atomLayers);
+    WriteBinary(outf, rnnLayers);
+
+  }
+
+  void loadModel(LStream &inf) {
+    ReadVector(inf, testFiles);
+    ReadString(inf, outBest);
+
+    ReadBinary(inf, wordCutOff);
+    ReadBinary(inf, featCutOff);
+    ReadBinary(inf, charCutOff);
+    ReadBinary(inf, tagCutOff);
+    ReadBinary(inf, initRange);
+    ReadBinary(inf, maxIter);
+    ReadBinary(inf, batchSize);
+    ReadBinary(inf, adaEps);
+    ReadBinary(inf, adaAlpha);
+    ReadBinary(inf, regParameter);
+    ReadBinary(inf, dropProb);
+    ReadBinary(inf, linearHiddenSize);
+    ReadBinary(inf, hiddenSize);
+    ReadBinary(inf, rnnHiddenSize);
+    ReadBinary(inf, wordEmbSize);
+    ReadBinary(inf, wordcontext);
+    ReadBinary(inf, wordEmbFineTune);
+    ReadBinary(inf, tagEmbSize);
+    ReadBinary(inf, tagEmbFineTune);
+    ReadBinary(inf, charEmbSize);
+    ReadBinary(inf, charcontext);
+    ReadBinary(inf, charEmbFineTune);
+    ReadBinary(inf, charhiddenSize);
+    ReadBinary(inf, verboseIter);
+    ReadBinary(inf, saveIntermediate);
+    ReadBinary(inf, train);
+    ReadBinary(inf, maxInstance);
+    ReadBinary(inf, seg);
+    ReadBinary(inf, relu);
+    ReadBinary(inf, atomLayers);
+    ReadBinary(inf, rnnLayers);
+  }
+
+  
 };
 
 #endif

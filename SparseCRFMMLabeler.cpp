@@ -667,11 +667,51 @@ void Labeler::readWordEmbeddings(const string& inFile, NRMat<dtype>& wordEmb) {
 }
 
 void Labeler::loadModelFile(const string& inputModelFile) {
+  
+  std::cout << "Start load model from file: " << inputModelFile << std::endl;
+  LStream inf(inputModelFile, "rb");
+  m_options.loadModel(inf);
+  m_options.showOptions();
+  m_wordAlphabet.loadModel(inf);
+  m_labelAlphabet.loadModel(inf);
+  m_featAlphabet.loadModel(inf);
+  m_classifier.loadModel(inf);
 
+  int m_tagAlphabets_size;
+  ReadBinary(inf, m_tagAlphabets_size);
+  m_tagAlphabets.resize(m_tagAlphabets_size);
+  for (int idx = 0; idx < m_tagAlphabets_size; idx++) {
+    m_tagAlphabets[idx].loadModel(inf);
+  }
+
+  ReadString(inf, nullkey);
+  ReadString(inf, unknownkey);
+  ReadString(inf, seperateKey);
+  std::cout << "Model has been loaded from file: " << inputModelFile << std::endl;
+  
 }
 
 void Labeler::writeModelFile(const string& outputModelFile) {
+  
+  std::cout << "Start write model to file: " << outputModelFile << std::endl;
+  LStream outf(outputModelFile, "w+");
+  m_options.writeModel(outf);
+  m_wordAlphabet.writeModel(outf);
+  m_labelAlphabet.writeModel(outf);
+  m_featAlphabet.writeModel(outf);
+  m_classifier.writeModel(outf);
 
+  int m_tagAlphabets_size = m_tagAlphabets.size();
+  WriteBinary(outf, m_tagAlphabets_size);
+  for (int idx = 0; idx < m_tagAlphabets_size; idx++) {
+    m_tagAlphabets[idx].writeModel(outf);
+  }
+
+  WriteString(outf, nullkey);
+  WriteString(outf, unknownkey);
+  WriteString(outf, seperateKey);
+  std::cout << "Model has been written in file: " << outputModelFile << std::endl;
+  
 }
 
 int main(int argc, char* argv[]) {

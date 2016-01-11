@@ -173,6 +173,29 @@ public:
 
   void loadModel();
 
+  void writeModel(LStream &outf) {
+    WriteBinary(outf, _labelSize);
+    WriteBinary(outf, _linearfeatSize);
+
+    WriteBinary(outf, _dropOut);
+    _eval.writeModel(outf);
+
+    _layer_linear.writeModel(outf);
+    _crf_layer.writeModel(outf);
+
+  }
+
+  void loadModel(LStream &inf) {
+    ReadBinary(inf, _labelSize);
+    ReadBinary(inf, _linearfeatSize);
+
+    ReadBinary(inf, _dropOut);
+    _eval.loadModel(inf);
+
+    _layer_linear.loadModel(inf);
+    _crf_layer.loadModel(inf);
+  }
+
   void checkgrad(const vector<Example>& examples, Tensor<xpu, 2, dtype> Wd, Tensor<xpu, 2, dtype> gradWd, const string& mark, int iter) {
     int charseed = mark.length();
     for (int i = 0; i < mark.length(); i++) {
