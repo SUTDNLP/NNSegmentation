@@ -25,7 +25,7 @@ you the performance of the test set.
 
 Also there will be three directories produced inside *pku.sample*. 
 These directories are *SparseCRFMMLabeler*, *LSTMCRFMMLabeler* and *SparseLSTMCRFMMLabeler*.
-Inside each directory, there are two files *pku.dev.featsOUTnodrop* and *pku.dev.featsOUTnodrop*, which are corresponding to the best tagged result of dev set and test set respectively until now.
+Inside each directory, there are two files *pku.dev.featsOUTnodrop* and *pku.test.featsOUTnodrop*, which are corresponding to the best tagged result of dev set and test set respectively until now.
 .
 #Feature Template
 + character unigram,  Ci\_i  ( -2=<i<=2 ). 
